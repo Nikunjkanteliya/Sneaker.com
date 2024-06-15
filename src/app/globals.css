@@ -2,7 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+* {
+  overflow-x: hidden;
+}
+
+body {
+  background: #eeebe5;
+}
+
+.active {
+  border-bottom: 2px solid #393e46;
+}
+
+.overflow_hidden {
+  overflow: hidden;
+}
+.nextjs-toast-errors-parent {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  /* * {
+    overflow: auto;
+  } */
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +54,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
