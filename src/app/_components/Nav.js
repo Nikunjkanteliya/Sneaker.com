@@ -11,28 +11,28 @@ const Nav = () => {
   const breadcrums = [" Home", "Contact us", "About", "Pairs"];
   const totalItems = useSelector((state) => state?.counter?.addedItems);
 
-  useEffect(() => {
-    // Find the nextjs-portal element
-    setTimeout(() => {
-      const nextjsPortal = document.querySelector("nextjs-portal"); // Adjust the selector based on your actual structure
+  // useEffect(() => {
+  //   // Find the nextjs-portal element
+  //   setTimeout(() => {
+  //     const nextjsPortal = document.querySelector("nextjs-portal"); // Adjust the selector based on your actual structure
 
-      // Check if the element exists and has a shadowRoot
-      if (nextjsPortal.shadowRoot) {
-        // console.log("inside shadow root")
-        const shadowRoot = nextjsPortal.shadowRoot;
+  //     // Check if the element exists and has a shadowRoot
+  //     if (nextjsPortal.shadowRoot) {
+  //       // console.log("inside shadow root")
+  //       const shadowRoot = nextjsPortal.shadowRoot;
 
-        // Example: Manipulating elements inside the shadow DOM
-        const shadowElement = shadowRoot.querySelector(
-          ".nextjs-toast-errors-parent"
-        );
-        if (shadowElement) {
-          shadowElement.style.display = "none"; // Example of changing style
-        }
-      } else {
-        console.error("nextjs-portal does not have a shadowRoot.");
-      }
-    }, 1000);
-  }, []);
+  //       // Example: Manipulating elements inside the shadow DOM
+  //       const shadowElement = shadowRoot.querySelector(
+  //         ".nextjs-toast-errors-parent"
+  //       );
+  //       if (shadowElement) {
+  //         shadowElement.style.display = "none"; // Example of changing style
+  //       }
+  //     } else {
+  //       console.error("nextjs-portal does not have a shadowRoot.");
+  //     }
+  //   }, 1000);
+  // }, []);
 
   const handleClick = (index) => {
     if (index === 2) {
